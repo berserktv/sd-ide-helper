@@ -54,7 +54,7 @@ stable_diffusion_install() {
     cd stable-diffusion-webui
 
     if [ $env_without == "no-GPU" ]; then
-        sed -i "s|commandline_args = .*|#ORIG &\n    ${CMD_ARGS_WITHOUT_GPU}" launch.py
+        sed -i "s|commandline_args = .*|#ORIG &\n    ${CMD_ARGS_WITHOUT_GPU}|" launch.py
     fi
 
     ./webui.sh
