@@ -7,37 +7,37 @@
             {
                 "name": "Manual",
                 "singleInstance": true,
-                "color": "#007fff",
+                "color": "deepskyblue",
                 "command": "firefox https://ivonblog.com/en-us/posts/linux-stable-diffusion-webui",
             },
             {
                 "name": "GPU-install-and-reeboot",
                 "singleInstance": true,
-                "color": "#007fff", 
+                "color": "#00ff00",
                 "command": "source .vscode/func.sh; gpu_install",
             },
             {
                 "name": "SD-install",
                 "singleInstance": true,
-                "color": "#007fff",
+                "color": "#00ff00",
                 "command": "source .vscode/func.sh; stable_diffusion_install",
             },
             {
                 "name": "SD-install-without-GPU(very slow)",
                 "singleInstance": true,
-                "color": "#007fff",
+                "color": "deepskyblue",
                 "command": "source .vscode/func.sh; stable_diffusion_install_without_gpu",
             },
             {
                 "name": "SD-run",
                 "singleInstance": true,
-                "color": "#007fff",
+                "color": "ghostwhite",
                 "command": "source .vscode/func.sh; stable_diffusion_run",
             },
             {
                 "name": "Browser",
                 "singleInstance": true,
-                "color": "#007fff",
+                "color": "ghostwhite",
                 "command": "firefox http://127.0.0.1:7860",
             },
         ]
