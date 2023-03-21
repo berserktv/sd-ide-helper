@@ -21,3 +21,21 @@ nvidia_driver_install() {
     sudo apt install ${NVIDIA_DRIVER_DEF}
 }
 
+gpu_install() {
+    nvidia_driver_install
+    cuda_driver_install
+
+    echo "After installing the video driver and cuda, you need to reboot the system (yes/no)?"
+    read env_answer
+    if [ $env_answer == "yes" || $env_answer == "YES" ]; then
+        reboot
+    fi
+}
+
+# install Anaconda (Pyhon 3.6 enviroment for SD WebUi)
+anaconda_install() {
+    cd ~
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    chmod +x Miniconda3-latest-Linux-x86_64.sh
+    bash Miniconda3-latest-Linux-x86_64.sh
+}
