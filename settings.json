@@ -22,6 +22,12 @@
                 "color": "#007fff",
                 "command": "source .vscode/func.sh; stable_diffusion_install",
             },
+            {
+                "name": "SD-install-without-GPU(very slow)",
+                "singleInstance": true,
+                "color": "#007fff",
+                "command": "source .vscode/func.sh; stable_diffusion_install_without_gpu",
+            },
         ]
     }
 }
