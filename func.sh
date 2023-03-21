@@ -39,3 +39,36 @@ anaconda_install() {
     chmod +x Miniconda3-latest-Linux-x86_64.sh
     bash Miniconda3-latest-Linux-x86_64.sh
 }
+
+
+
+CMD_ARGS_WITHOUT_GPU="commandline_args = os.environ.get('COMMANDLINE_ARGS', \"--skip-torch-cuda-test --no-half\")"
+
+stable_diffusion_install() {
+    local cur_dir=$(pwd)
+    local env_without=$1
+    anaconda_install
+
+    cd ~
+    git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+    cd stable-diffusion-webui
+
+    if [ $env_without == "no-GPU" ]; then
+        sed -i "s|commandline_args = .*|#ORIG &\n    ${CMD_ARGS_WITHOUT_GPU}" launch.py
+    fi
+
+    ./webui.sh
+    cd $cur_dir
+}
+
+stable_diffusion_install_without_gpu() {
+    stable_diffusion_install "no-GPU"
+}
+
+stable_diffusion_run() {
+    local cur_dir=$(pwd)
+    cd ~/stable-diffusion-webui
+    ./webui.sh
+    cd $cur_dir
+}
+
