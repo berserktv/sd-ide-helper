@@ -28,6 +28,18 @@
                 "color": "#007fff",
                 "command": "source .vscode/func.sh; stable_diffusion_install_without_gpu",
             },
+            {
+                "name": "SD-run",
+                "singleInstance": true,
+                "color": "#007fff",
+                "command": "source .vscode/func.sh; stable_diffusion_run",
+            },
+            {
+                "name": "Browser",
+                "singleInstance": true,
+                "color": "#007fff",
+                "command": "firefox http://127.0.0.1:7860",
+            },
         ]
     }
 }
