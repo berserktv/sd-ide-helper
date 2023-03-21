@@ -1,0 +1,27 @@
+{
+    "actionButtons": {
+
+        "reloadButton": null,
+        "loadNpmCommands": false,
+        "commands": [
+            {
+                "name": "Manual",
+                "singleInstance": true,
+                "color": "#007fff",
+                "command": "firefox https://ivonblog.com/en-us/posts/linux-stable-diffusion-webui",
+            },
+            {
+                "name": "GPU-install-and-reeboot",
+                "singleInstance": true,
+                "color": "#007fff", 
+                "command": "source .vscode/func.sh; gpu_install",
+            },
+            {
+                "name": "SD-install",
+                "singleInstance": true,
+                "color": "#007fff",
+                "command": "source .vscode/func.sh; stable_diffusion_install",
+            },
+        ]
+    }
+}
