@@ -26,3 +26,27 @@ code --install-extension seunlanlege.action-buttons
 mkdir ~/sd-ide-helper; cd ~/sd-ide-helper;
 git clone https://github.com/berserktv/sd-ide-helper .vscode
 code .
+
+2. Установка Stable Diffusion c использованием мощного графического ускорителя Nvidia
+
+Последовательность действий следующая (buttons):
+
+- GPU-install-and-reeboot
+- SD-install
+
+  Примечание: после установки видеодрайвера, требуется перезагрузка системы
+
+3. Установка Stable Diffusion без использования GPU
+
+Последовательность действий следующая (buttons):
+
+- SD-install-without-GPU(very slow)
+
+4. Запуск Stable Diffusion и открытие Web интерфейса (buttons)
+   
+- SD-run
+- Browser
+
+5. Исходный Manual c подробным описанием
+
+https://ivonblog.com/en-us/posts/linux-stable-diffusion-webui
