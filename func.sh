@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 NVIDIA_DRIVER_DEF=nvidia-driver-525
 
