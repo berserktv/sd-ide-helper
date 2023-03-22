@@ -18,7 +18,7 @@ nvidia_driver_install() {
     sudo apt purge *nvidia*
     # List drivers for your GPU
     ubuntu-drivers list
-    sudo apt install ${NVIDIA_DRIVER_DEF}
+    sudo apt -y install ${NVIDIA_DRIVER_DEF}
 }
 
 gpu_install() {
@@ -27,7 +27,7 @@ gpu_install() {
 
     echo "After installing the video driver and cuda, you need to reboot the system (yes/no)?"
     read env_answer
-    if [ $env_answer == "yes" || $env_answer == "YES" ]; then
+    if [[ $env_answer == "yes" || $env_answer == "YES" ]]; then
         reboot
     fi
 }
@@ -41,8 +41,7 @@ anaconda_install() {
 }
 
 
-
-CMD_ARGS_WITHOUT_GPU="commandline_args = os.environ.get('COMMANDLINE_ARGS', \"--skip-torch-cuda-test --no-half\")"
+CMD_ARGS_WITHOUT_GPU="export COMMANDLINE_ARGS=\"--skip-torch-cuda-test --no-half\""
 
 stable_diffusion_install() {
     local cur_dir=$(pwd)
@@ -53,8 +52,13 @@ stable_diffusion_install() {
     git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
     cd stable-diffusion-webui
 
-    if [ $env_without == "no-GPU" ]; then
-        sed -i "s|commandline_args = .*|#ORIG &\n    ${CMD_ARGS_WITHOUT_GPU}|" launch.py
+    if [ "$env_without" == "no-GPU" ]; then
+        sed -i "s|#export COMMANDLINE_ARGS=.*|&\n${CMD_ARGS_WITHOUT_GPU}|" webui-user.sh
+    else
+        if cat webui-user.sh | grep -q "skip-torch-cuda-test" ; then
+            #turn off --skip-torch-cuda-test, if left in COMMANDLINE_ARGS
+            sed -i "s|^export COMMANDLINE_ARGS=.*|#&|" webui-user.sh
+        fi
     fi
 
     ./webui.sh
