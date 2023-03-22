@@ -25,6 +25,7 @@ gpu_install() {
     nvidia_driver_install
     cuda_driver_install
 
+    echo
     echo "After installing the video driver and cuda, you need to reboot the system (yes/no)?"
     read env_answer
     if [[ $env_answer == "yes" || $env_answer == "YES" ]]; then
