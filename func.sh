@@ -40,6 +40,11 @@ anaconda_install() {
     bash Miniconda3-latest-Linux-x86_64.sh
 }
 
+# fix ERROR: Cannot activate python venv
+additional_python_package() {
+    sudo apt install -y python3.10-venv
+}
+
 
 CMD_ARGS_WITHOUT_GPU="export COMMANDLINE_ARGS=\"--skip-torch-cuda-test --no-half\""
 
@@ -47,6 +52,7 @@ stable_diffusion_install() {
     local cur_dir=$(pwd)
     local env_without=$1
     anaconda_install
+    additional_python_package
 
     cd ~
     git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
