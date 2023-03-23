@@ -17,8 +17,9 @@ Stable Diffusion можно запускать и без наличия мощн
 т.е. время генерации сокращается в 40 раз.
 
 
-1. Установка sd-ide-helper
+1. Установка sd-ide-helper в Linux (Ubuntu-22.04)
 
+```sh
 sudo apt install -y git snap
 sudo snap install --classic code
 code --install-extension seunlanlege.action-buttons
@@ -26,6 +27,7 @@ code --install-extension seunlanlege.action-buttons
 mkdir ~/sd-ide-helper; cd ~/sd-ide-helper;
 git clone https://github.com/berserktv/sd-ide-helper .vscode
 code .
+```
 
 2. Установка Stable Diffusion c использованием мощного графического ускорителя Nvidia
 
