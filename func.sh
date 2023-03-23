@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# repository: https://github.com/berserktv/sd-ide-helper, autor: Alexander Demachev
+# license -  The MIT License (MIT)
+
 
 NVIDIA_DRIVER_DEF=nvidia-driver-525
 
