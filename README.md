@@ -16,8 +16,9 @@ Stable Diffusion можно запускать и без наличия мощн
 у меня заняло 4 минуты, а после подключения графического ускорителя GeForce RTX 3060 - 6 секунд,
 т.е. время генерации сокращается в 40 раз.
 
+#### 1. Установка sd-ide-helper
 
-1. Установка sd-ide-helper в Linux (Ubuntu-22.04)
+1.1 Установка sd-ide-helper в Linux (Ubuntu-22.04)
 
 ```sh
 sudo apt install -y git snap
@@ -29,7 +30,35 @@ git clone https://github.com/berserktv/sd-ide-helper .vscode
 code .
 ```
 
-2. Установка Stable Diffusion c использованием мощного графического ускорителя Nvidia
+1.2 Установка sd-ide-helper в Windows 10
+
+Установите менеджер пакетов WinGet с сайта Microsoft (там он называется App Installer):
+
+https://www.microsoft.com/en-us/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab
+
+альтернативный вариант установки:
+
+https://github.com/microsoft/winget-cli/releases/latest,
+загрузив и установив пакет Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
+
+запустите в терминале (cmd) команды:
+
+```sh
+winget install -e --id Git.Git
+winget install -e --id Microsoft.VisualStudioCode
+```
+
+перезапустите терминал (cmd)
+```sh
+code --install-extension seunlanlege.action-buttons
+cd %HOMEDRIVE%%HOMEPATH%
+mkdir sd-ide-helper & cd sd-ide-helper
+git clone https://github.com/berserktv/sd-ide-helper .vscode
+code .
+```
+
+
+#### 2. Установка Stable Diffusion c использованием мощного графического ускорителя Nvidia
 
 Последовательность действий следующая (buttons):
 
@@ -41,17 +70,17 @@ code .
               которая устанавливается в интерактивном режиме,
               т.е. в консоле требуется ответить на несколько вопросов.
 
-3. Установка Stable Diffusion без использования GPU
+#### 3. Установка Stable Diffusion без использования GPU
 
 Последовательность действий следующая (buttons):
 
 - SD-install-without-GPU(very slow)
 
-4. Запуск Stable Diffusion и открытие Web интерфейса (buttons)
+#### 4. Запуск Stable Diffusion и открытие Web интерфейса (buttons)
    
 - SD-run
 - Browser
 
-5. Исходный Manual c подробным описанием
+#### 5. Исходный Manual c подробным описанием
 
-https://ivonblog.com/en-us/posts/linux-stable-diffusion-webui
+    https://ivonblog.com/en-us/posts/linux-stable-diffusion-webui
