@@ -40,6 +40,13 @@
                 "color": "ghostwhite",
                 "command": "firefox http://127.0.0.1:7860",
             },
+            {
+                "name": "WinSD-install",
+                "singleInstance": true,
+                "color": "darkblue",
+                "command": ".vscode\\func.bat",
+            },
+
         ]
     }
 }
