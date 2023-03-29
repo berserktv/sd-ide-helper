@@ -53,6 +53,12 @@
                 "command": ".vscode\\func_sd_install.bat",
             },
             {
+                "name": "WinSD-install-without-GPU",
+                "singleInstance": true,
+                "color": "deepskyblue",
+                "command": "set .vscode\\func_sd_install.bat",
+            },
+            {
                 "name": "WinBrowser",
                 "singleInstance": true,
                 "color": "ghostwhite",

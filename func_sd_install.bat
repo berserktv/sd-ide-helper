@@ -10,4 +10,17 @@ set PYTHON=%HOMEDRIVE%%HOMEPATH%\AppData\Local\Programs\Python\Python310\python.
 cd %HOMEDRIVE%%HOMEPATH%
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 cd stable-diffusion-webui
+
+if %noGPU% == "y" (
+    set infile=webui-user.bat
+    set find=set COMMANDLINE_ARGS=
+    set replace=set COMMANDLINE_ARGS=--skip-torch-cuda-test
+    for /F "tokens=* delims=," %%n in (!infile!) do (
+        set LINE=%%n
+        set TMPR=!LINE:%find%=%replace%!
+        echo !TMPR!>>TMP.TXT
+    )
+    move TMP.TXT %infile%
+)
+
 call webui-user.bat
