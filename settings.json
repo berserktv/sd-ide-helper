@@ -41,12 +41,23 @@
                 "command": "firefox http://127.0.0.1:7860",
             },
             {
+                "name": "WinGPU-install",
+                "singleInstance": true,
+                "color": "#00ff00",
+                "command": "winget install -e --id=Nvidia.GeForceExperience",
+            },
+            {
                 "name": "WinSD-install",
                 "singleInstance": true,
-                "color": "darkblue",
-                "command": ".vscode\\func.bat",
+                "color": "#00ff00",
+                "command": ".vscode\\func_sd_install.bat",
             },
-
+            {
+                "name": "WinBrowser",
+                "singleInstance": true,
+                "color": "ghostwhite",
+                "command": "start http://127.0.0.1:7860",
+            },
         ]
     }
 }
