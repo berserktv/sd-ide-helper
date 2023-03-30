@@ -59,7 +59,7 @@
                 "command": ".vscode\\func.bat no-GPU",
             },
             {
-                "name": "SD-run",
+                "name": "WinSD-run",
                 "singleInstance": true,
                 "color": "ghostwhite",
                 "command": ".vscode\\func.bat SD-run",

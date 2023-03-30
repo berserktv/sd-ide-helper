@@ -1,6 +1,6 @@
 @echo on
 
-IF %1==SD-run GOTO sd_run
+IF "%1"=="SD-run" GOTO sd_run
 
 echo "Install Python 3.10 Environment"
 winget install -e --id=Python.Python.3.10
@@ -16,7 +16,7 @@ cd stable-diffusion-webui
 set outfile=webui-user.bat
 
 @echo off
-IF %1==no-GPU (
+IF "%1"=="no-GPU" (
     echo @echo off>%outfile%
     echo. >>%outfile%
     echo set PYTHON=>>%outfile%
