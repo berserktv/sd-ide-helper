@@ -60,27 +60,48 @@ code .
 
 #### 2. Установка Stable Diffusion c использованием мощного графического ускорителя Nvidia
 
-Последовательность действий следующая (buttons):
+Последовательность действий для Ubuntu-22.04 следующая (buttons):
 
 - GPU-install-and-reboot
 - SD-install
 
-  Примечание: после установки видеодрайвера, требуется перезагрузка системы,
-              для запуска SD используется Anaconda (Python 3.6 enviroment),
-              которая устанавливается в интерактивном режиме,
-              т.е. в консоле требуется ответить на несколько вопросов.
+  Примечание: для установки видеодрайвера требуется ввести пароль администратора (sudo)
+              и далее необходима перезагрузка системы, для запуска SD используется Python 3
+              дистрибутив Anaconda (Miniconda3-latest-Linux-x86_64), который устанавливается
+              в интерактивном режиме, т.е. в консоле требуется ответить на несколько вопросов.
+
+Последовательность действий для Windows 10:
+
+- WinGPU-install
+- WinSD-install
+
+  Примечание: В Windows 10 драйвер для видео карт Nvidia обычно устанавливается
+              в автоматическом режиме, вначале проверьте установку с помощью кнопки WinSD-install.
+
 
 #### 3. Установка Stable Diffusion без использования GPU
 
-Последовательность действий следующая (buttons):
+Последовательность действий Ubuntu-22.04 следующая (buttons):
 
-- SD-install-without-GPU(very slow)
+- SD-install-without-GPU
+
+Последовательность действий для Windows 10:
+
+- WinSD-install-without-GPU
+
 
 #### 4. Запуск Stable Diffusion и открытие Web интерфейса (buttons)
-   
+
+для Ubuntu-22.04:
+
 - SD-run
 - Browser
 
+для Windows 10:
+
+- WinSD-run
+- WinBrowser
+
 #### 5. Исходный Manual c подробным описанием
 
-    https://ivonblog.com/en-us/posts/linux-stable-diffusion-webui
+https://ivonblog.com/en-us/posts/linux-stable-diffusion-webui
