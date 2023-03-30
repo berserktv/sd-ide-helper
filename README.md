@@ -81,7 +81,7 @@ code .
 
 #### 3. Установка Stable Diffusion без использования GPU
 
-Последовательность действий Ubuntu-22.04 следующая (buttons):
+Последовательность действий для Ubuntu-22.04 следующая (buttons):
 
 - SD-install-without-GPU
 
