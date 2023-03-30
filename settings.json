@@ -56,7 +56,7 @@
                 "name": "WinSD-install-without-GPU",
                 "singleInstance": true,
                 "color": "deepskyblue",
-                "command": ".vscode\\func_sd_without_gpu.bat",
+                "command": ".vscode\\func_sd_without_gpu.bat no-GPU",
             },
             {
                 "name": "WinBrowser",

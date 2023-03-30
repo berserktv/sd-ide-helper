@@ -11,6 +11,8 @@ cd %HOMEDRIVE%%HOMEPATH%
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 cd stable-diffusion-webui
 
+IF %1 NEQ no-GPU GOTO СallWebui
+
 set outfile=webui-user.bat
 
 echo @echo off>%outfile%
@@ -22,4 +24,7 @@ echo set COMMANDLINE_ARGS=--skip-torch-cuda-test --no-half>>%outfile%
 echo. >>%outfile%
 echo call webui.bat>>%outfile%
 
+:СallWebui
 call webui-user.bat
+
+:ExitBat
