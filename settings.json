@@ -43,7 +43,7 @@
             {
                 "name": "WinGPU-install",
                 "singleInstance": true,
-                "color": "#00ff00",
+                "color": "deepskyblue",
                 "command": "winget install -e --id=Nvidia.GeForceExperience",
             },
             {
