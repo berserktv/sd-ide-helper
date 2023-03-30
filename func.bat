@@ -1,5 +1,7 @@
 @echo on
 
+IF %1==SD-run GOTO sd_run
+
 echo "Install Python 3.10 Environment"
 winget install -e --id=Python.Python.3.10
 winget install -e --id=Microsoft.VCRedist.2015+.x64
@@ -30,3 +32,12 @@ IF %1==no-GPU (
 )
 
 call webui-user.bat
+GOTO ExitBat
+
+
+:sd_run
+cd %HOMEDRIVE%%HOMEPATH%
+cd stable-diffusion-webui
+call webui-user.bat
+
+:ExitBat
