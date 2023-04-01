@@ -19,7 +19,7 @@ set outfile=webui-user.bat
 IF "%1"=="no-GPU" (
     echo @echo off>%outfile%
     echo. >>%outfile%
-    echo set PYTHON=>>%outfile%
+    echo set PYTHON=%PYTHON%>>%outfile%
     echo set GIT=>>%outfile%
     echo set VENV_DIR=>>%outfile%
     echo set COMMANDLINE_ARGS=--skip-torch-cuda-test --no-half>>%outfile%
