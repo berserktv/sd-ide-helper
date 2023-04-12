@@ -23,10 +23,6 @@ Stable Diffusion можно запускать и без наличия мощн
 
 в этом случае вы можете попробовать использовать параметры (файл webui-user.bat или webui-user.sh)
 
-COMMANDLINE_ARGS=--medvram --opt-split-attention
-
-или же
-
 COMMANDLINE_ARGS=--lowvram --opt-split-attention
 
 Если и это не помогло, то для Windows 10 (WinSD-install-without-GPU) можно удалить устройство видео адаптера в диспетчере устройств,
